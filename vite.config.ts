@@ -14,6 +14,7 @@ console.log('process:::env', process.argv);
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     reactRefresh(),
     vitePluginImp({
@@ -58,6 +59,7 @@ export default defineConfig({
     }
   },
   build: {
+    outDir:'docs',    
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, 'index.html'),
